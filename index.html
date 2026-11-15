@@ -711,6 +711,7 @@
       /* Mobile section tab bar (stands in for the top nav on small screens) */
       .tab-bar { display: none; }
       @media (max-width: 1020px) {
+        .topbar { display: none; }
         .tab-bar {
           display: flex; gap: 8px; position: sticky; top: 0; z-index: 60;
           padding: 10px 16px; overflow-x: auto; scrollbar-width: none;
@@ -849,7 +850,7 @@
       </div>
     </header>
     <nav class="tab-bar" aria-label="Page sections">
-      <a href="#home">The home</a>
+      <a href="#home">About</a>
       <a href="#homes">Homes</a>
       <a href="#photos">Photos</a>
       <a href="#vouchers">Vouchers</a>
