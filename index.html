@@ -708,6 +708,26 @@
       }
       .sticky-bar .btn { flex: 1; padding: 15px 10px; }
 
+      /* Mobile section tab bar (stands in for the top nav on small screens) */
+      .tab-bar { display: none; }
+      @media (max-width: 1020px) {
+        .tab-bar {
+          display: flex; gap: 8px; position: sticky; top: 0; z-index: 60;
+          padding: 10px 16px; overflow-x: auto; scrollbar-width: none;
+          background: color-mix(in srgb, var(--paper) 94%, transparent);
+          backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+          border-bottom: 1px solid var(--line);
+        }
+        .tab-bar::-webkit-scrollbar { display: none; }
+        .tab-bar a {
+          flex: 0 0 auto; text-decoration: none; font-weight: 700; font-size: .88rem;
+          color: var(--ink-2); padding: 8px 14px; border-radius: 999px;
+          border: 1px solid var(--line); background: var(--paper);
+        }
+        .tab-bar a.on { background: var(--olive-deep); border-color: var(--olive-deep); color: var(--paper); }
+        section, .gallery-sec, .faq-sec, .work-sec, .voucher-band { scroll-margin-top: 64px; }
+      }
+
       /* Lightbox */
       dialog.lightbox { border: 0; padding: 0; background: transparent; max-width: min(94vw, 920px); width: 100%; }
       dialog.lightbox::backdrop { background: rgba(26, 32, 20, .92); }
@@ -828,6 +848,15 @@
         </div>
       </div>
     </header>
+    <nav class="tab-bar" aria-label="Page sections">
+      <a href="#home">The home</a>
+      <a href="#homes">Homes</a>
+      <a href="#photos">Photos</a>
+      <a href="#vouchers">Vouchers</a>
+      <a href="#details">Details</a>
+      <a href="#work">Our work</a>
+      <a href="#faq">FAQ</a>
+    </nav>
 
     <main id="top">
       <!-- Hero -->
@@ -1031,7 +1060,7 @@
       </div>
 
       <!-- Available homes -->
-      <section class="wrap" aria-labelledby="units-h">
+      <section class="wrap" id="homes" aria-labelledby="units-h">
         <div class="sec-head rv">
           <span class="sec-label">The homes</span>
           <h2 id="units-h">Available <em>homes</em></h2>
@@ -1465,6 +1494,30 @@
           if (!dialog.open) { return; }
           if (event.key === "ArrowLeft") { show(current - 1); }
           if (event.key === "ArrowRight") { show(current + 1); }
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var bar = document.querySelector(".tab-bar");
+        if (!bar || !("IntersectionObserver" in window)) { return; }
+        var links = Array.prototype.slice.call(bar.querySelectorAll("a"));
+        var map = {};
+        links.forEach(function (a) { map[a.getAttribute("href").slice(1)] = a; });
+        var spy = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) { return; }
+            links.forEach(function (a) { a.classList.remove("on"); });
+            var link = map[e.target.id];
+            if (link) {
+              link.classList.add("on");
+              link.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+            }
+          });
+        }, { rootMargin: "-30% 0px -60% 0px" });
+        Object.keys(map).forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) { spy.observe(el); }
         });
       })();
     </script>
