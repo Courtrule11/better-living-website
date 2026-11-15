@@ -1,0 +1,1472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Better Living. Quality, renovated rental homes across Washington County, PA, because everyone deserves better living. We renovate homes, welcome voucher holders, and invest in neighborhoods from Donora to Charleroi and beyond. Now leasing: a 2 bed, 1 bath home for $1,000 a month. Section 8 and HUD-VASH vouchers welcome." />
+    <link rel="icon" href="data:," />
+    <title>Better Living · Rental Homes in Washington County, PA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --forest: #46543B;
+        --forest-deep: #2C3824;
+        --forest-ink: #2B3324;
+        --sage: #7D8C6E;
+        --sage-mid: #9AA88C;
+        --olive: #5A6B45;
+        --olive-deep: #47563A;
+        --cobalt: #2B4C9B;
+        --aegean: #2F5C8C;
+        --sky: #A9C8E2;
+        --deep-sea: #274B73;
+        --gold: #86622F;
+        --gold-soft: #DCC39E;
+        --clay: #B98A63;
+        --clay-deep: #9A6F4B;
+        --bg: #FAF6ED;
+        --ivory: #F4EDDD;
+        --ivory-2: #EAE0CC;
+        --paper: #FFFDF7;
+        --ink: #3B332A;
+        --ink-2: #57493A;
+        --ink-3: #77664C;
+        --line: #DED1B9;
+        --line-soft: #EBE1CD;
+        --sage-soft: #E4E8D4;
+        --cream: #F8EED6;
+        --stone: #E7DCC6;
+        --stone-2: #DCD0B6;
+        --frame: #E9DFC6;
+        --photo-filter: sepia(.22) saturate(.88) contrast(.99) brightness(1.03);
+        --shadow: 0 2px 6px rgba(74,58,38,.07), 0 28px 64px rgba(74,58,38,.16);
+        --shadow-sm: 0 1px 3px rgba(74,58,38,.06), 0 12px 30px rgba(74,58,38,.09);
+        --shadow-warm: 0 18px 44px rgba(122,92,58,.20);
+        --radius: 16px;
+        --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+        --stone-img: url("stone.jpg");
+        --tile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52' viewBox='0 0 52 52'%3E%3Crect width='52' height='52' fill='%23F6EFDF'/%3E%3Cpath d='M26 7 L45 26 L26 45 L7 26 Z' fill='none' stroke='%232B4C9B' stroke-width='2.4'/%3E%3Ccircle cx='26' cy='26' r='4.6' fill='%232B4C9B'/%3E%3Ccircle cx='0' cy='0' r='4' fill='%233E6FA3'/%3E%3Ccircle cx='52' cy='0' r='4' fill='%233E6FA3'/%3E%3Ccircle cx='0' cy='52' r='4' fill='%233E6FA3'/%3E%3Ccircle cx='52' cy='52' r='4' fill='%233E6FA3'/%3E%3C/svg%3E");
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #191410;
+          --ivory: #211B15;
+          --ivory-2: #2B241B;
+          --paper: #241E17;
+          --ink: #F4EBD8;
+          --ink-2: #D8C9AC;
+          --ink-3: #AC9C80;
+          --line: #4A3E2E;
+          --line-soft: #382F23;
+          --sage-soft: #2C3324;
+          --frame: #3A4433;
+          --cobalt: #93B4DE;
+          --aegean: #7CA3CC;
+          --gold: #C9A05F;
+          --olive: #A3B58C;
+          --olive-deep: #C4D3A8;
+          --stone: #2E271E;
+          --stone-2: #3A3125;
+          --shadow: 0 2px 6px rgba(0,0,0,.45), 0 24px 60px rgba(0,0,0,.5);
+          --shadow-sm: 0 1px 3px rgba(0,0,0,.4), 0 10px 28px rgba(0,0,0,.35);
+          --shadow-warm: 0 18px 44px rgba(0,0,0,.4);
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        overflow-x: clip;
+        font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+        background-color: var(--bg);
+        background-image: var(--stone-img);
+        background-size: 860px 860px;
+        background-repeat: repeat;
+        background-position: top left;
+        color: var(--ink);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        position: relative;
+      }
+      /* cream wash over the stone: strong enough that body text reads cleanly, stone grain still faintly visible */
+      body::after {
+        content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        background: linear-gradient(180deg, rgba(250,246,237,.78), rgba(250,246,237,.68) 38%, rgba(244,237,221,.74));
+      }
+      @media (prefers-color-scheme: dark) {
+        body { background-image: none; }
+        body::after { background: transparent; }
+      }
+      body > * { position: relative; z-index: 1; }
+      body::before {
+        content: ""; position: fixed; inset: 0; z-index: 999; pointer-events: none;
+        background-image: var(--noise); opacity: .032; mix-blend-mode: multiply;
+      }
+      @media (prefers-color-scheme: dark) { body::before { mix-blend-mode: screen; opacity: .05; } }
+      a { color: inherit; }
+      img { max-width: 100%; }
+      .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+      .serif { font-family: "DM Serif Display", Georgia, "Times New Roman", serif; font-weight: 400; }
+
+      .rv { opacity: 0; transform: translateY(26px); transition: opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1); }
+      .rv.in { opacity: 1; transform: none; }
+      .rv-d1 { transition-delay: .08s; } .rv-d2 { transition-delay: .16s; } .rv-d3 { transition-delay: .24s; }
+
+      ::selection { background: rgba(62,111,163,.28); }
+      /* Mediterranean tile strip, blue and white pattern like the tiled walls in the reference */
+      .tile-strip { position: absolute; top: 0; left: 0; right: 0; height: 26px; z-index: 2; pointer-events: none;
+        background-image: linear-gradient(rgba(250,246,237,.34), rgba(250,246,237,.34)), var(--tile);
+        background-size: auto, 26px 26px; background-repeat: repeat; opacity: .9; }
+      @media (prefers-color-scheme: dark) { .tile-strip { background-image: linear-gradient(rgba(18,14,10,.5), rgba(18,14,10,.5)), var(--tile); } }
+      @keyframes kenburns { from { transform: scale(1.01); } to { transform: scale(1.09); } }
+      h2 em.blue { color: var(--cobalt); }
+      .sec-label.blue { color: var(--aegean); }
+      .sec-label.blue::before, .sec-head.center .sec-label.blue::after { background: var(--aegean); }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+        font-weight: 800; font-size: .95rem; letter-spacing: .01em; text-decoration: none;
+        border-radius: 999px; padding: 14px 26px; border: 1px solid transparent;
+        transition: background .2s ease, border-color .2s ease, color .2s ease, transform .15s ease, box-shadow .2s ease;
+        white-space: nowrap; cursor: pointer; background: none; font-family: inherit;
+      }
+      .btn:active { transform: scale(.97); }
+      .btn svg { width: 18px; height: 18px; flex: none; }
+      .btn-solid { background: var(--forest); color: var(--cream); box-shadow: 0 12px 26px rgba(52,64,40,.30); }
+      .btn-solid:hover { background: var(--olive-deep); box-shadow: var(--shadow-warm); }
+      @media (prefers-color-scheme: dark) {
+        .btn-solid { background: #5C6E4E; box-shadow: 0 10px 24px rgba(0,0,0,.35); }
+        .btn-solid:hover { background: #6E8260; }
+      }
+      .btn-line { background: color-mix(in srgb, var(--paper) 72%, transparent); border-color: var(--line); color: var(--ink); }
+      .btn-line:hover { border-color: var(--aegean); color: var(--cobalt); }
+      .btn-gold { background: linear-gradient(135deg, #C49A67, #A87E4F); color: #FFF8EC; box-shadow: 0 12px 26px rgba(169,133,72,.32); }
+      .btn-gold:hover { background: linear-gradient(135deg, #B38955, #97753E); }
+      .btn-cream { background: var(--cream); color: var(--forest-deep); }
+      .btn-cream:hover { background: #FFFFFF; }
+      .btn-outline-cream { background: transparent; border-color: rgba(248,238,214,.45); color: var(--cream); }
+      .btn-outline-cream:hover { border-color: var(--cream); }
+      .btn-lg { padding: 17px 32px; font-size: 1rem; }
+
+      /* Top bar */
+      .topbar {
+        position: sticky; top: 0; z-index: 40;
+        background: color-mix(in srgb, var(--bg) 90%, transparent);
+        backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line-soft);
+      }
+      .topbar-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; }
+      .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; }
+      .brand-mark {
+        width: 44px; height: 48px; border-radius: 999px 999px 10px 10px; flex: none;
+        background: linear-gradient(180deg, #55663F 0%, #33503F 55%, #274B73 100%); color: var(--cream);
+        display: grid; place-items: center;
+        font-family: "DM Serif Display", Georgia, serif; font-size: 1.02rem; letter-spacing: .02em;
+        box-shadow: inset 0 0 0 1px rgba(248,238,214,.25), 0 8px 18px rgba(74,58,38,.22);
+      }
+      .brand-name { font-family: "DM Serif Display", Georgia, serif; font-size: 1.32rem; line-height: 1.1; display: block; letter-spacing: .01em; }
+      .brand-sub { font-size: .72rem; color: var(--ink-3); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; display: block; margin-top: 2px; }
+      .top-nav { display: flex; gap: 30px; }
+      .top-nav a { text-decoration: none; font-weight: 700; font-size: .92rem; color: var(--ink-2); }
+      .top-nav a:hover { color: var(--olive-deep); }
+      .top-actions { display: flex; gap: 10px; align-items: center; }
+      .top-phone { font-weight: 800; font-size: .95rem; text-decoration: none; margin-right: 4px; }
+      .top-phone:hover { color: var(--olive-deep); }
+
+      /* Hero: real stone surface, sun washed limestone */
+      .hero { position: relative; overflow: clip; isolation: isolate;
+        background-color: #F3EAD6;
+        background-image:
+          radial-gradient(760px 460px at 88% -120px, rgba(126,168,214,.38), transparent 62%),
+          radial-gradient(720px 420px at 92% -80px, rgba(201,154,103,.24), transparent 62%),
+          radial-gradient(560px 380px at -80px 78%, rgba(174,135,87,.16), transparent 60%),
+          linear-gradient(168deg, rgba(251,247,236,.78) 0%, rgba(244,237,221,.66) 52%, rgba(239,229,208,.72) 100%),
+          var(--stone-img);
+        background-size: auto, auto, auto, auto, 920px 920px;
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+        background-position: top right, top right, bottom left, center, top left;
+      }
+      @media (prefers-color-scheme: dark) {
+        .hero { background: radial-gradient(720px 420px at 92% -80px, rgba(201,154,103,.16), transparent 62%), linear-gradient(168deg, #241E16 0%, var(--ivory) 60%, #1D1812 100%); }
+      }
+      .hero::before {
+        content: ""; position: absolute; inset: 0; z-index: -1;
+        background-image: var(--noise); opacity: .05; mix-blend-mode: multiply; pointer-events: none;
+      }
+      .hero::after {
+        content: ""; position: absolute; right: -110px; top: 54px; width: 340px; height: 340px; border-radius: 50%;
+        border: 1px solid rgba(62,111,163,.32);
+        box-shadow: 0 0 0 26px rgba(62,111,163,.05), 0 0 0 58px rgba(62,111,163,.04);
+        pointer-events: none;
+      }
+      .hero-grid {
+        position: relative; display: grid; grid-template-columns: 1.02fr .98fr;
+        gap: 54px; align-items: center; padding: 88px 0 118px;
+      }
+      .hero-eyebrow {
+        display: inline-flex; align-items: center; gap: 10px;
+        background: color-mix(in srgb, var(--paper) 88%, transparent); border: 1px solid var(--line);
+        border-radius: 999px; padding: 8px 16px 8px 10px;
+        font-size: .8rem; font-weight: 800; letter-spacing: .02em; color: var(--ink-2);
+        box-shadow: var(--shadow-sm); margin-bottom: 26px;
+      }
+      .hero-eyebrow .dot {
+        display: inline-flex; align-items: center; gap: 6px;
+        background: var(--sage-soft); color: var(--olive-deep);
+        border-radius: 999px; padding: 4px 11px; font-size: .74rem; letter-spacing: .06em; text-transform: uppercase;
+      }
+      @media (prefers-color-scheme: dark) { .hero-eyebrow .dot { color: var(--gold-soft); } }
+      .hero-eyebrow .dot::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #66784F; box-shadow: 0 0 0 3px rgba(102,120,79,.22); }
+      h1 {
+        font-family: "DM Serif Display", Georgia, serif; font-weight: 400;
+        font-size: clamp(3rem, 6.2vw, 4.8rem); line-height: 1.0; letter-spacing: 0;
+        margin: 0 0 12px; color: var(--forest-ink);
+      }
+      @media (prefers-color-scheme: dark) { h1 { color: var(--ink); } }
+      h1 em { font-style: italic; color: var(--cobalt); }
+      @media (prefers-color-scheme: dark) { h1 em { color: var(--cobalt); } }
+      .hero-place {
+        font-size: clamp(1rem, 2vw, 1.18rem); font-weight: 800; color: var(--cobalt);
+        margin: 0 0 20px; letter-spacing: .14em; text-transform: uppercase;
+        display: flex; align-items: center; gap: 14px;
+      }
+      .hero-place::after { content: ""; width: 56px; height: 1px; background: var(--aegean); opacity: .7; }
+      .hero-lede { font-size: 1.13rem; color: var(--ink-2); margin: 0 0 32px; max-width: 31em; }
+      .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+      .hero-note { margin-top: 22px; font-size: .92rem; color: var(--ink-3); font-weight: 600; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+      .hero-note span { display: inline-flex; align-items: center; gap: 7px; }
+      .hero-note svg { width: 15px; height: 15px; color: var(--olive); flex: none; }
+
+      .hero-photo { margin: 0; position: relative; }
+      .hero-photo .frame {
+        position: relative;
+        border-radius: 999px 999px 22px 22px; overflow: hidden; box-shadow: var(--shadow);
+        border: 7px solid var(--frame);
+        outline: 1px solid var(--line-soft);
+        background: var(--stone);
+      }
+      /* warm stone wash over the photo so its whites and grays sit inside the page palette */
+      .hero-photo .frame::after {
+        content: ""; position: absolute; inset: 0; pointer-events: none;
+        background: linear-gradient(180deg, rgba(244,237,221,.18), transparent 32%, transparent 70%, rgba(39,75,115,.16));
+        box-shadow: inset 0 0 0 1px rgba(255,253,247,.30), inset 0 -70px 90px -50px rgba(43,76,112,.32), inset 0 50px 70px -40px rgba(250,246,237,.40);
+      }
+      .hero-photo img {
+        display: block; width: 100%; aspect-ratio: 4 / 4.35; object-fit: cover;
+        filter: var(--photo-filter);
+        animation: heroZoom 24s ease-in-out infinite alternate;
+      }
+      @keyframes heroZoom { from { transform: scale(1.02); } to { transform: scale(1.1); } }
+      .price-card {
+        position: absolute; left: -34px; bottom: 34px; z-index: 3;
+        background: linear-gradient(150deg, #4C5C3C 0%, #33503F 46%, #274B73 100%);
+        color: var(--cream);
+        border-radius: 20px 20px 20px 6px; padding: 21px 24px;
+        box-shadow: 0 24px 50px rgba(38,48,30,.40), inset 0 0 0 1px rgba(248,238,214,.16);
+        display: flex; align-items: center; gap: 18px;
+      }
+      .price-card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; background-image: var(--noise); opacity: .06; pointer-events: none; }
+      .price-card .pc-k { font-size: .7rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-soft); }
+      .price-card .pc-v { font-family: "DM Serif Display", Georgia, serif; font-size: 2.15rem; line-height: 1.05; }
+      .price-card .pc-v small { font-family: "Manrope", sans-serif; font-size: .82rem; font-weight: 700; color: rgba(248,238,214,.75); }
+      .price-card .pc-div { width: 1px; align-self: stretch; background: rgba(248,238,214,.22); }
+      .price-card .pc-s { font-size: .86rem; font-weight: 700; line-height: 1.45; color: rgba(248,238,214,.88); }
+
+      /* Stats: individual stone cards, never overlapping on mobile */
+      .stats-band { position: relative; z-index: 2; margin-top: -46px; }
+      .stats {
+        display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+      }
+      .stat {
+        background-color: var(--paper);
+        background-image: linear-gradient(180deg, rgba(255,253,247,.92), rgba(244,237,221,.84)), var(--stone-img);
+        background-size: auto, 520px 520px;
+        border: 1px solid var(--line-soft); border-radius: 18px 18px 18px 6px;
+        box-shadow: var(--shadow-sm); padding: 24px 26px; position: relative; overflow: hidden;
+      }
+      @media (prefers-color-scheme: dark) { .stat { background-image: linear-gradient(180deg, var(--paper), var(--ivory)); } }
+      .stat::before { content: ""; position: absolute; inset: 0; background-image: var(--noise); opacity: .035; pointer-events: none; }
+      .stat .k { font-size: .7rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 8px; }
+      .stat .k::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--sage); flex: none; }
+      .stat:nth-child(even) .k::before { background: var(--aegean); }
+      .stat .v { font-family: "DM Serif Display", Georgia, serif; font-size: 1.68rem; line-height: 1.15; margin-top: 6px; }
+      .stat .v small { font-family: "Manrope", sans-serif; font-size: .85rem; font-weight: 700; color: var(--ink-2); }
+
+      /* Trust strip: warm stone band */
+      .trust { margin-top: 58px; color: var(--cream); position: relative; overflow: hidden;
+        background: linear-gradient(115deg, #2C3824 0%, #3E5C3F 34%, #2C5F6E 68%, #274B73 100%); }
+      .trust::before { content: ""; position: absolute; inset: 0; background-image: var(--noise); opacity: .07; pointer-events: none; }
+      .trust-in {
+        position: relative; display: flex; flex-wrap: wrap; gap: 14px 44px; align-items: center; justify-content: space-between;
+        padding-top: 24px; padding-bottom: 24px;
+      }
+      .trust-item { display: inline-flex; align-items: center; gap: 11px; font-weight: 700; font-size: .95rem; }
+      .trust-item svg { width: 20px; height: 20px; color: var(--gold-soft); flex: none; }
+
+      /* Sun divider */
+      .sun-divider { display: flex; align-items: center; gap: 18px; max-width: 1180px; margin: 0 auto; padding: 58px 32px 0; }
+      .sun-divider::before, .sun-divider::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); }
+      .sun-divider .sun { width: 46px; height: 46px; flex: none; border-radius: 50%; border: 1px solid var(--line); background: var(--paper); display: grid; place-items: center; color: var(--aegean); box-shadow: var(--shadow-sm); }
+      .sun-divider .sun svg { width: 21px; height: 21px; }
+
+      /* Sections */
+      section { padding: 84px 0 0; }
+      .sec-head { margin-bottom: 40px; max-width: 660px; }
+      .sec-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+      .sec-label {
+        display: inline-flex; align-items: center; gap: 10px;
+        font-size: .74rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
+        color: var(--olive); margin-bottom: 16px;
+      }
+      .sec-label::before { content: ""; width: 30px; height: 2px; background: var(--sage); border-radius: 2px; }
+      .sec-head.center .sec-label::after { content: ""; width: 30px; height: 2px; background: var(--sage); border-radius: 2px; }
+      h2 {
+        font-family: "DM Serif Display", Georgia, serif; font-weight: 400;
+        font-size: clamp(2.05rem, 4vw, 2.75rem); letter-spacing: 0; line-height: 1.12; margin: 0;
+      }
+      h2 em { font-style: italic; color: var(--olive-deep); }
+      @media (prefers-color-scheme: dark) { h2 em { color: var(--gold-soft); } }
+      .sec-head p { margin: 14px 0 0; color: var(--ink-2); font-size: 1.04rem; }
+
+      /* About */
+      .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: stretch; }
+      .pull-quote {
+        font-family: "DM Serif Display", Georgia, serif; font-size: clamp(1.65rem, 3.1vw, 2.25rem);
+        line-height: 1.32; margin: 0; color: var(--ink);
+        background-color: var(--ivory);
+        background-image: linear-gradient(165deg, rgba(255,253,247,.9), rgba(244,237,221,.8)), var(--stone-img);
+        background-size: auto, 620px 620px;
+        border: 1px solid var(--line-soft); border-radius: 120px 24px 24px 24px;
+        padding: 46px 42px 38px; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+      }
+      @media (prefers-color-scheme: dark) { .pull-quote { background-image: linear-gradient(165deg, var(--paper), var(--ivory)); } }
+      .pull-quote::before { content: ""; position: absolute; inset: 0; background-image: var(--noise); opacity: .04; pointer-events: none; }
+      .pull-quote em { font-style: italic; color: var(--olive-deep); }
+      @media (prefers-color-scheme: dark) { .pull-quote em { color: var(--gold-soft); } }
+      .pull-quote .pq-by {
+        display: block; margin-top: 22px; font-family: "Manrope", sans-serif;
+        font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--olive);
+      }
+      .about-copy { padding: 12px 4px; }
+      .about-copy p { margin: 0 0 18px; color: var(--ink-2); font-size: 1.05rem; }
+      .about-copy p:last-child { margin-bottom: 0; }
+      .feature-list { margin-top: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+      .feature {
+        background: var(--paper); border: 1px solid var(--line-soft); border-radius: 20px 20px 20px 6px;
+        padding: 28px 26px 24px; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+      }
+      .feature::before { content: ""; position: absolute; inset: 0; background-image: var(--noise); opacity: .03; pointer-events: none; }
+      .feature .f-num {
+        display: inline-grid; place-items: center; min-width: 52px; height: 34px; padding: 0 10px;
+        border-radius: 999px; background: var(--sage-soft); color: var(--olive-deep);
+        font-family: "DM Serif Display", Georgia, serif; font-style: italic; font-size: .98rem;
+      }
+      @media (prefers-color-scheme: dark) { .feature .f-num { color: var(--gold-soft); } }
+      .feature h3 { margin: 14px 0 6px; font-size: 1.08rem; font-weight: 800; letter-spacing: -.01em; }
+      .feature p { margin: 0; color: var(--ink-2); font-size: .95rem; }
+
+      /* Service area */
+      .area-block { margin-top: 52px; padding: 40px 40px 36px; border: 1px solid var(--line-soft); border-radius: 24px;
+        background-color: var(--ivory);
+        background-image: radial-gradient(480px 220px at 96% 0%, rgba(201,154,103,.18), transparent 65%), linear-gradient(170deg, rgba(244,237,221,.78), rgba(255,253,247,.7)), var(--stone-img);
+        background-size: auto, auto, 680px 680px; position: relative; overflow: hidden; }
+      @media (prefers-color-scheme: dark) { .area-block { background-image: radial-gradient(480px 220px at 96% 0%, rgba(201,154,103,.12), transparent 65%), linear-gradient(170deg, var(--ivory), var(--paper)); } }
+      .area-block::before { content: ""; position: absolute; inset: 0; background-image: var(--noise); opacity: .04; pointer-events: none; }
+      .area-block .sec-label { margin-bottom: 12px; }
+      .area-block h3 { margin: 0; font-family: "DM Serif Display", Georgia, serif; font-weight: 400; font-size: clamp(1.55rem, 2.6vw, 1.95rem); line-height: 1.15; position: relative; }
+      .area-block h3 em { font-style: italic; color: var(--olive-deep); }
+      @media (prefers-color-scheme: dark) { .area-block h3 em { color: var(--gold-soft); } }
+      .area-block p { margin: 12px 0 0; color: var(--ink-2); font-size: 1.02rem; max-width: 46em; position: relative; }
+      .area-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; position: relative; }
+      .area-chip {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: var(--paper); border: 1px solid var(--line); border-radius: 999px;
+        padding: 10px 18px; font-weight: 700; font-size: .92rem; box-shadow: var(--shadow-sm);
+      }
+      .area-chip svg { width: 15px; height: 15px; color: var(--olive); flex: none; }
+      .area-chip.live { background: linear-gradient(140deg, #4C5C3C 0%, #2C5F6E 60%, #274B73 100%); border-color: #2C5F6E; color: var(--cream); }
+      .area-chip.live svg { color: var(--gold-soft); }
+      .area-chip.live .ac-tag { font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-soft); }
+
+      /* Photo banner */
+      .photo-banner { margin-top: 72px; position: relative; border-radius: 26px; overflow: hidden; box-shadow: var(--shadow); min-height: 430px; display: flex; align-items: flex-end; }
+      .photo-banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: var(--photo-filter); animation: kenburns 18s ease-in-out infinite alternate; }
+      .photo-banner::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(244,237,221,.10), transparent 30%), linear-gradient(6deg, rgba(13,26,42,.92) 0%, rgba(17,34,54,.82) 46%, rgba(23,42,66,.45) 72%, transparent 92%); box-shadow: inset 0 0 90px rgba(39,75,115,.25); }
+      .photo-banner .pb-in { position: relative; z-index: 1; padding: 38px 42px; color: #FFF7E6; max-width: 620px; }
+      .photo-banner .pb-k { font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #F0D9AC; text-shadow: 0 1px 10px rgba(10,20,34,.8); }
+      .photo-banner .pb-t { font-family: "DM Serif Display", Georgia, serif; font-size: clamp(1.7rem, 3.4vw, 2.4rem); line-height: 1.18; margin-top: 8px; text-shadow: 0 2px 16px rgba(10,20,34,.75), 0 1px 4px rgba(10,20,34,.8); }
+      .photo-banner .pb-t em { font-style: italic; color: #F0D9AC; }
+
+      /* Gallery: stone band, warm treated photos, arched bathroom */
+      .gallery-sec { margin-top: 84px; padding: 80px 0 84px; position: relative;
+        background-color: #EFE6D2;
+        background-image: radial-gradient(700px 320px at 88% 0%, rgba(126,168,214,.20), transparent 60%), radial-gradient(640px 300px at 8% 0%, rgba(201,154,103,.16), transparent 60%), linear-gradient(180deg, rgba(244,237,221,.72), rgba(239,230,210,.76)), var(--stone-img);
+        background-size: auto, auto, auto, 880px 880px; background-repeat: no-repeat, no-repeat, no-repeat, repeat; }
+      @media (prefers-color-scheme: dark) { .gallery-sec { background: linear-gradient(180deg, var(--ivory), #1D1812); } }
+      .gallery-sec::before { content: ""; position: absolute; inset: 0; background-image: var(--noise); opacity: .04; pointer-events: none; }
+      .gallery-sec .wrap { position: relative; }
+      .gallery { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+      .gallery figure { margin: 0; display: flex; flex-direction: column; }
+      .gallery .g-frame {
+        border-radius: var(--radius); overflow: hidden; border: 5px solid var(--frame);
+        box-shadow: var(--shadow-sm); flex: 1; position: relative; background: var(--stone);
+      }
+      /* same warm wash as the hero photo, with a soft inner shade so photo edges melt into the stone frame */
+      .gallery .g-frame::after {
+        content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+        background: linear-gradient(180deg, rgba(244,237,221,.15), transparent 30%, transparent 72%, rgba(39,75,115,.14));
+        box-shadow: inset 0 0 0 1px rgba(255,253,247,.28), inset 0 -46px 60px -34px rgba(43,76,112,.30), inset 0 34px 48px -28px rgba(250,246,237,.35);
+      }
+      .g-bath .g-frame { border-radius: 130px 130px 16px 16px; }
+      .g-kitchen .g-frame { border-radius: 20px 20px 20px 6px; }
+      .gallery button.g-open { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+      .gallery img { display: block; width: 100%; height: 100%; object-fit: cover; filter: var(--photo-filter); transition: transform .6s cubic-bezier(.22,.61,.36,1); }
+      .gallery button.g-open:hover img { transform: scale(1.045); }
+      .gallery .g-zoom {
+        position: absolute; right: 14px; bottom: 14px; z-index: 2; width: 38px; height: 38px; border-radius: 50%;
+        background: rgba(40,50,32,.78); color: #F8EED6; display: grid; place-items: center;
+        opacity: 0; transition: opacity .25s ease; pointer-events: none;
+      }
+      .gallery button.g-open:hover .g-zoom, .gallery button.g-open:focus-visible .g-zoom { opacity: 1; }
+      .g-zoom svg { width: 17px; height: 17px; }
+      .g-bath { grid-column: span 4; grid-row: span 2; }
+      .g-bath img { aspect-ratio: 3 / 4.35; }
+      .g-kitchen { grid-column: span 8; }
+      .g-kitchen img { aspect-ratio: 16 / 7.4; }
+      .g-living { grid-column: span 4; }
+      .g-living img { aspect-ratio: 4 / 3; }
+      .g-bed { grid-column: span 4; }
+      .g-bed img { aspect-ratio: 4 / 3; }
+      .gallery figcaption {
+        padding: 12px 2px 0; font-size: .78rem; font-weight: 800;
+        letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2);
+        display: flex; align-items: center; gap: 12px;
+      }
+      .gallery figcaption::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+      /* Our Work: portfolio preview band on the same stone surface */
+      .work-sec { margin-top: 84px; padding: 80px 0 84px; position: relative;
+        background-color: #EFE6D2;
+        background-image: radial-gradient(700px 320px at 12% 0%, rgba(126,168,214,.16), transparent 60%), radial-gradient(640px 300px at 90% 0%, rgba(201,154,103,.15), transparent 60%), linear-gradient(180deg, rgba(244,237,221,.72), rgba(239,230,210,.76)), var(--stone-img);
+        background-size: auto, auto, auto, 880px 880px; background-repeat: no-repeat, no-repeat, no-repeat, repeat; }
+      @media (prefers-color-scheme: dark) { .work-sec { background: linear-gradient(180deg, var(--ivory), #1D1812); } }
+      .work-sec::before { content: ""; position: absolute; inset: 0; background-image: var(--noise); opacity: .04; pointer-events: none; }
+      .work-sec .wrap { position: relative; }
+      .work-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; }
+      .work-card { background: var(--paper); border: 1px solid var(--line-soft); border-radius: 20px 20px 20px 6px; overflow: hidden; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
+      .work-lead { grid-column: span 7; }
+      .work-side { grid-column: span 5; }
+      .work-wide { grid-column: span 7; }
+      .work-frame { position: relative; overflow: hidden; background: var(--stone); border-bottom: 5px solid var(--frame); }
+      .work-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+        background: linear-gradient(180deg, rgba(244,237,221,.15), transparent 30%, transparent 72%, rgba(39,75,115,.14));
+        box-shadow: inset 0 0 0 1px rgba(255,253,247,.28), inset 0 -46px 60px -34px rgba(43,76,112,.30); }
+      .work-frame img { display: block; width: 100%; height: 100%; object-fit: cover; filter: var(--photo-filter); }
+      .work-lead .work-frame img { aspect-ratio: 16 / 10; }
+      .work-side .work-frame img { aspect-ratio: 16 / 10.6; }
+      .work-wide .work-frame img { aspect-ratio: 16 / 8.4; }
+      .work-body { padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+      .work-tag { align-self: flex-start; font-size: .68rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--olive-deep); background: var(--sage-soft); border-radius: 999px; padding: 5px 11px; }
+      @media (prefers-color-scheme: dark) { .work-tag { color: var(--gold-soft); } }
+      .work-tag.blue { background: rgba(169,200,226,.35); color: var(--aegean); }
+      @media (prefers-color-scheme: dark) { .work-tag.blue { color: var(--sky); background: rgba(47,92,140,.35); } }
+      .work-body h3 { margin: 2px 0 0; font-family: "DM Serif Display", Georgia, serif; font-weight: 400; font-size: 1.45rem; line-height: 1.15; }
+      .work-body p { margin: 0; color: var(--ink-2); font-size: .96rem; }
+      .work-soon { grid-column: span 12; align-items: center; justify-content: center; text-align: center; gap: 10px;
+        padding: 40px 28px 36px; border-style: dashed; border-color: var(--line);
+        background-color: var(--ivory);
+        background-image: linear-gradient(180deg, rgba(255,253,247,.9), rgba(244,237,221,.84)), var(--stone-img);
+        background-size: auto, 560px 560px; }
+      @media (prefers-color-scheme: dark) { .work-soon { background-image: linear-gradient(180deg, var(--paper), var(--ivory)); } }
+      .work-soon .ws-ic { width: 52px; height: 58px; border-radius: 999px 999px 11px 11px; display: grid; place-items: center;
+        background: linear-gradient(180deg, #55663F 0%, #33503F 55%, #274B73 100%); color: var(--cream);
+        box-shadow: inset 0 0 0 1px rgba(248,238,214,.25), 0 8px 18px rgba(74,58,38,.22); }
+      .work-soon .ws-ic svg { width: 24px; height: 24px; }
+      .work-soon h3 { margin: 4px 0 0; font-family: "DM Serif Display", Georgia, serif; font-weight: 400; font-size: 1.5rem; line-height: 1.15; }
+      .work-soon p { margin: 0; color: var(--ink-2); font-size: .96rem; max-width: 36em; }
+      .work-steps-head { margin: 54px 0 22px; }
+      .work-steps-head h3 { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; font-size: 1.65rem; line-height: 1.2; margin: 0; }
+      .work-steps-head h3 em { font-style: italic; color: var(--olive-deep); }
+      @media (prefers-color-scheme: dark) { .work-steps-head h3 em { color: var(--gold-soft); } }
+      .work-steps-head p { margin: 8px 0 0; color: var(--ink-2); max-width: 44em; }
+      .work-note { margin-top: 28px; position: relative; overflow: hidden;
+        background-color: var(--paper);
+        background-image: linear-gradient(180deg, rgba(255,253,247,.94), rgba(244,237,221,.88)), var(--stone-img);
+        background-size: auto, 560px 560px;
+        border: 1px solid var(--line-soft); border-radius: 20px 20px 20px 6px; box-shadow: var(--shadow-sm);
+        padding: 32px 34px; display: flex; flex-wrap: wrap; gap: 18px 28px; align-items: center; justify-content: space-between; }
+      @media (prefers-color-scheme: dark) { .work-note { background-image: linear-gradient(180deg, var(--paper), var(--ivory)); } }
+      .work-note h3 { margin: 0; font-size: 1.15rem; font-weight: 800; letter-spacing: -.01em; }
+      .work-note p { margin: 6px 0 0; color: var(--ink-2); max-width: 42em; }
+      .work-note .wn-text { flex: 1 1 420px; }
+      @media (max-width: 900px) {
+        .work-sec { margin-top: 64px; padding: 60px 0 64px; }
+        .work-grid { grid-template-columns: 1fr; gap: 16px; }
+        .work-lead, .work-side, .work-wide, .work-soon { grid-column: span 1; }
+        .work-lead .work-frame img, .work-side .work-frame img, .work-wide .work-frame img { aspect-ratio: 16 / 10; }
+        .work-note { padding: 26px 24px; }
+        .work-note .btn { width: 100%; }
+      }
+
+      /* Units */
+      .units { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: stretch; }
+      .unit-card {
+        background: var(--paper); border: 1px solid var(--line-soft); border-radius: 24px;
+        box-shadow: var(--shadow-sm); overflow: hidden; display: flex; flex-direction: column; position: relative;
+      }
+      .unit-photo { position: relative; }
+      .unit-photo img { display: block; width: 100%; aspect-ratio: 16 / 7.5; object-fit: cover; filter: var(--photo-filter); }
+      .unit-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(244,237,221,.14), transparent 38%, transparent 62%, rgba(30,52,80,.24)); box-shadow: inset 0 -50px 60px -40px rgba(43,76,112,.28); pointer-events: none; }
+      .unit-photo .badge { position: absolute; top: 18px; left: 18px; z-index: 1; }
+      .unit-body { padding: 32px 34px 34px; display: flex; flex-direction: column; flex: 1; }
+      .unit-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+      .unit-name { font-family: "DM Serif Display", Georgia, serif; font-size: 1.85rem; line-height: 1.15; }
+      .unit-spec { color: var(--olive-deep); font-weight: 800; margin-top: 2px; font-size: .95rem; letter-spacing: .02em; }
+      @media (prefers-color-scheme: dark) { .unit-spec { color: var(--gold-soft); } }
+      .unit-price { text-align: right; flex: none; }
+      .unit-price .p-v { font-family: "DM Serif Display", Georgia, serif; font-size: 1.95rem; line-height: 1; }
+      .unit-price .p-k { font-size: .78rem; font-weight: 700; color: var(--ink-3); }
+      .badge {
+        font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+        padding: 7px 12px; border-radius: 999px; white-space: nowrap; flex: none;
+        display: inline-flex; align-items: center; gap: 7px;
+      }
+      .badge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+      .badge-avail { background: var(--cream); color: var(--forest-deep); box-shadow: var(--shadow-sm); }
+      .badge-soon { background: rgba(248,238,214,.14); color: var(--cream); border: 1px solid rgba(248,238,214,.3); }
+      .unit-card > .unit-body > p { color: var(--ink-2); margin: 14px 0 0; }
+      .unit-facts {
+        display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+        margin: 26px 0 30px; padding: 20px 20px;
+        background-color: var(--ivory);
+        background-image: linear-gradient(170deg, rgba(244,237,221,.82), rgba(237,229,211,.78)), var(--stone-img);
+        background-size: auto, 560px 560px;
+        border: 1px solid var(--line-soft); border-radius: 16px; position: relative; overflow: hidden;
+      }
+      @media (prefers-color-scheme: dark) { .unit-facts { background-image: linear-gradient(170deg, var(--ivory), var(--sage-soft)); } }
+      .unit-facts::before { content: ""; position: absolute; inset: 0; background-image: var(--noise); opacity: .04; pointer-events: none; }
+      .fact .k { font-size: .66rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+      .fact .v { font-weight: 800; font-size: 1.08rem; margin-top: 3px; }
+      .unit-actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 10px; }
+      .soon-card { color: var(--cream); border-color: var(--forest-deep); box-shadow: var(--shadow);
+        background: radial-gradient(420px 240px at 100% 0%, rgba(201,154,103,.26), transparent 60%), linear-gradient(160deg, #46543B 0%, #2C5F6E 58%, #274B73 100%); }
+      .soon-card::before { content: ""; position: absolute; inset: 0; background-image: var(--noise); opacity: .06; pointer-events: none; }
+      .soon-card .unit-body { padding-top: 34px; position: relative; }
+      .soon-card .unit-name { color: var(--cream); }
+      .soon-card .unit-spec { color: var(--gold-soft); }
+      .soon-card .unit-body > p { color: rgba(248,238,214,.84); }
+      .soon-steps { list-style: none; margin: 24px 0 30px; padding: 22px 0 0; border-top: 1px solid rgba(248,238,214,.18); display: grid; gap: 14px; }
+      .soon-steps li { display: flex; gap: 12px; align-items: flex-start; font-weight: 600; font-size: .96rem; color: rgba(248,238,214,.92); }
+      .soon-steps .n {
+        flex: none; width: 25px; height: 25px; border-radius: 999px 999px 8px 8px; margin-top: 1px;
+        border: 1px solid var(--gold-soft); color: var(--gold-soft);
+        display: grid; place-items: center; font-size: .76rem; font-weight: 800;
+      }
+      .soon-card .unit-actions { flex-direction: column; align-items: stretch; }
+      .soon-card .unit-actions .btn { width: 100%; }
+
+      /* Voucher showcase */
+      .voucher-band {
+        margin-top: 84px; border-radius: 28px 28px 28px 8px; overflow: hidden;
+        display: grid; grid-template-columns: 1.05fr .95fr; box-shadow: var(--shadow);
+      }
+      .voucher-copy { color: var(--cream); padding: 56px 52px; position: relative;
+        background: radial-gradient(460px 260px at 0% 0%, rgba(201,154,103,.22), transparent 60%), linear-gradient(155deg, #274B73 0%, #2C5F6E 48%, #2C3824 100%); }
+      .voucher-copy::before { content: ""; position: absolute; inset: 0; background-image: var(--noise); opacity: .06; pointer-events: none; }
+      .voucher-copy > * { position: relative; }
+      .voucher-copy .sec-label { color: var(--gold-soft); }
+      .voucher-copy .sec-label::before { background: var(--gold-soft); }
+      .voucher-copy h2 { color: var(--cream); }
+      .voucher-copy h2 em { color: var(--gold-soft); }
+      .voucher-copy p { margin: 16px 0 0; color: rgba(248,238,214,.84); max-width: 34em; }
+      .voucher-points { list-style: none; margin: 28px 0 34px; padding: 0; display: grid; gap: 13px; }
+      .voucher-points li { display: flex; gap: 12px; align-items: flex-start; font-weight: 700; }
+      .voucher-points svg { width: 20px; height: 20px; flex: none; color: var(--gold-soft); margin-top: 2px; }
+      .voucher-photo { position: relative; min-height: 320px; }
+      .voucher-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; filter: var(--photo-filter); }
+      .voucher-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(244,237,221,.12), transparent 36%), linear-gradient(90deg, rgba(23,42,66,.50), transparent 48%); box-shadow: inset 0 -50px 60px -40px rgba(43,76,112,.28); }
+
+      /* Utilities */
+      .util-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 24px; }
+      .util-card { border-radius: 22px; padding: 36px; position: relative; overflow: hidden; }
+      .util-card::before { content: ""; position: absolute; inset: 0; background-image: var(--noise); opacity: .04; pointer-events: none; }
+      .util-card > * { position: relative; }
+      .util-card.owner { border: 1px solid var(--line-soft); background-color: #EFE6D0; background-image: linear-gradient(165deg, rgba(239,230,208,.82), rgba(237,229,211,.76)), var(--stone-img); background-size: auto, 600px 600px; }
+      @media (prefers-color-scheme: dark) { .util-card.owner { background: linear-gradient(165deg, #2E271E, var(--sage-soft)); } }
+      .util-card.tenant { background: var(--paper); border: 1px solid var(--line); box-shadow: var(--shadow-sm); }
+      .util-card h3 { margin: 0 0 6px; font-size: 1.25rem; font-weight: 800; display: flex; align-items: center; gap: 11px; letter-spacing: -.01em; }
+      .util-card h3 .u-ic { width: 42px; height: 46px; border-radius: 999px 999px 11px 11px; display: grid; place-items: center; flex: none; }
+      .util-card.owner h3 .u-ic { background: linear-gradient(180deg, #55663F, var(--forest-deep)); color: var(--cream); }
+      .util-card.tenant h3 .u-ic { background: var(--sage-soft); color: var(--olive-deep); }
+      .util-card h3 svg { width: 20px; height: 20px; }
+      .util-card .u-sub { color: var(--ink-3); font-size: .93rem; margin: 0 0 8px; font-weight: 600; }
+      .u-list { list-style: none; margin: 0; padding: 0; }
+      .u-list li {
+        display: flex; align-items: center; gap: 12px; font-weight: 700;
+        padding: 14px 0; border-top: 1px solid color-mix(in srgb, var(--line) 75%, transparent);
+      }
+      .u-list li svg { width: 18px; height: 18px; flex: none; color: var(--olive); }
+      .util-card.tenant .u-list li svg { color: var(--olive); }
+      .u-note { margin: 16px 0 0; font-size: .9rem; color: var(--ink-3); font-weight: 600; }
+      .policy-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+      .policy-chip {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: var(--paper); border: 1px solid var(--line); border-radius: 999px;
+        padding: 10px 18px; font-weight: 700; font-size: .9rem; box-shadow: var(--shadow-sm);
+      }
+      .policy-chip svg { width: 16px; height: 16px; color: var(--olive); flex: none; }
+
+      /* Steps */
+      .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+      .step {
+        background: var(--paper); border: 1px solid var(--line-soft); border-radius: 20px 20px 20px 6px;
+        padding: 28px 26px 26px; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+      }
+      .step::before { content: ""; position: absolute; inset: 0; background-image: var(--noise); opacity: .03; pointer-events: none; }
+      .step .s-num { font-family: "DM Serif Display", Georgia, serif; font-style: italic; font-size: 1.55rem; color: var(--olive-deep); line-height: 1; display: inline-flex; align-items: center; gap: 10px; }
+      @media (prefers-color-scheme: dark) { .step .s-num { color: var(--gold-soft); } }
+      .step .s-num::after { content: ""; width: 38px; height: 1px; background: var(--line); }
+      .step h3 { margin: 14px 0 7px; font-size: 1.15rem; font-weight: 800; letter-spacing: -.01em; position: relative; }
+      .step p { margin: 0; color: var(--ink-2); font-size: .98rem; position: relative; }
+
+      /* FAQ */
+      .faq-sec { margin-top: 84px; padding: 80px 0 84px; position: relative;
+        background-color: #EFE6D2;
+        background-image: radial-gradient(700px 320px at 10% 0%, rgba(126,168,214,.18), transparent 60%), radial-gradient(620px 300px at 92% 0%, rgba(201,154,103,.14), transparent 60%), linear-gradient(180deg, rgba(244,237,221,.72), rgba(239,230,210,.76)), var(--stone-img);
+        background-size: auto, auto, auto, 880px 880px; background-repeat: no-repeat, no-repeat, no-repeat, repeat; }
+      @media (prefers-color-scheme: dark) { .faq-sec { background: linear-gradient(180deg, var(--ivory), #1D1812); } }
+      .faq-sec::before { content: ""; position: absolute; inset: 0; background-image: var(--noise); opacity: .04; pointer-events: none; }
+      .faq-sec .wrap { position: relative; }
+      .faq-list { max-width: 820px; margin: 0 auto; display: grid; gap: 12px; }
+      .faq-item { background: var(--paper); border: 1px solid var(--line-soft); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; }
+      .faq-item summary {
+        list-style: none; cursor: pointer; padding: 22px 26px;
+        display: flex; align-items: center; justify-content: space-between; gap: 16px;
+        font-weight: 800; font-size: 1.02rem;
+      }
+      .faq-item summary::-webkit-details-marker { display: none; }
+      .faq-item summary .f-ic {
+        flex: none; width: 32px; height: 32px; border-radius: 50%;
+        border: 1px solid var(--line); display: grid; place-items: center; color: var(--olive-deep);
+        transition: transform .3s ease, background .3s ease, color .3s ease;
+      }
+      .faq-item summary .f-ic svg { width: 15px; height: 15px; }
+      .faq-item[open ] summary .f-ic { transform: rotate(45deg); background: var(--cobalt); color: var(--cream); border-color: var(--cobalt); }
+      .faq-item .f-body { padding: 0 26px 24px; color: var(--ink-2); }
+      .faq-item .f-body p { margin: 0; max-width: 44em; }
+
+      /* Contact */
+      .contact-card {
+        position: relative; border-radius: 28px 28px 28px 8px; overflow: hidden;
+        color: var(--cream); box-shadow: var(--shadow);
+        display: grid; grid-template-columns: 1.1fr .9fr;
+        background: radial-gradient(560px 320px at 100% 0%, rgba(169,200,226,.22), transparent 62%), linear-gradient(155deg, #2C3824 0%, #2C5F6E 55%, #274B73 100%);
+      }
+      .contact-card::before { content: ""; position: absolute; inset: 0; background-image: var(--noise); opacity: .06; pointer-events: none; }
+      .contact-card::after { content: ""; position: absolute; right: -70px; top: -70px; width: 230px; height: 230px; border-radius: 50%; border: 1px solid rgba(248,238,214,.25); box-shadow: 0 0 0 22px rgba(248,238,214,.05); pointer-events: none; }
+      .contact-copy { padding: 60px 54px; position: relative; z-index: 1; }
+      .contact-copy .sec-label { color: var(--gold-soft); }
+      .contact-copy .sec-label::before { background: var(--gold-soft); }
+      .contact-copy h2 { color: var(--cream); font-size: clamp(2.2rem, 4.4vw, 3rem); }
+      .contact-copy h2 em { color: var(--gold-soft); }
+      .contact-copy p { margin: 16px 0 0; color: rgba(248,238,214,.84); max-width: 32em; }
+      .contact-side {
+        background: rgba(248,238,214,.05); border-left: 1px solid rgba(248,238,214,.14);
+        padding: 60px 44px; display: flex; flex-direction: column; justify-content: center; gap: 12px;
+        position: relative; z-index: 1;
+      }
+      .phone-big {
+        font-family: "DM Serif Display", Georgia, serif;
+        font-size: clamp(1.9rem, 4vw, 2.5rem); line-height: 1.1;
+        text-decoration: none; display: block; margin-bottom: 10px; color: var(--cream);
+      }
+      .phone-big:hover { text-decoration: underline; text-underline-offset: 6px; text-decoration-color: var(--gold-soft); }
+      .contact-side .cs-k { font-size: .72rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-soft); }
+
+      footer { padding: 60px 0 130px; }
+      footer .f-in {
+        display: flex; flex-wrap: wrap; gap: 10px 28px; justify-content: space-between; align-items: baseline;
+        border-top: 1px solid var(--line); padding-top: 28px;
+        color: var(--ink-3); font-size: .92rem;
+      }
+      footer .f-brand { font-family: "DM Serif Display", Georgia, serif; font-size: 1.15rem; color: var(--ink); }
+      footer a { font-weight: 800; color: var(--ink-2); text-decoration: none; }
+      footer a:hover { color: var(--olive-deep); }
+
+      /* Sticky mobile bar */
+      .sticky-bar {
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+        display: none; gap: 10px; padding: 12px 18px calc(12px + env(safe-area-inset-bottom));
+        background: color-mix(in srgb, var(--paper) 94%, transparent);
+        backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+        border-top: 1px solid var(--line);
+      }
+      .sticky-bar .btn { flex: 1; padding: 15px 10px; }
+
+      /* Lightbox */
+      dialog.lightbox { border: 0; padding: 0; background: transparent; max-width: min(94vw, 920px); width: 100%; }
+      dialog.lightbox::backdrop { background: rgba(26, 32, 20, .92); }
+      .lb-frame { background: var(--paper); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+      .lb-frame img { display: block; width: 100%; max-height: 76vh; object-fit: contain; background: #26301F; filter: var(--photo-filter); }
+      .lb-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; }
+      .lb-cap { font-weight: 800; font-size: .84rem; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-2); }
+      .lb-nav { display: flex; gap: 8px; align-items: center; }
+      .lb-btn {
+        border: 1px solid var(--line); background: transparent; color: var(--ink);
+        border-radius: 999px; padding: 9px 16px; font: inherit; font-weight: 800; font-size: .88rem; cursor: pointer;
+        display: inline-flex; align-items: center; gap: 6px;
+      }
+      .lb-btn:hover { border-color: var(--sage); color: var(--olive-deep); }
+      .lb-btn svg { width: 15px; height: 15px; }
+
+      @media (max-width: 1020px) {
+        .top-nav { display: none; }
+        .price-card { left: 14px; bottom: 22px; }
+      }
+      /* Mobile stacking fix: every hero piece in normal flow, in order, no overlap */
+      @media (max-width: 900px) {
+        .hero-grid { grid-template-columns: 1fr; gap: 38px; padding: 46px 0 40px; }
+        .hero::after { width: 220px; height: 220px; right: -80px; top: 30px; }
+        .hero-photo { display: flex; flex-direction: column; }
+        .hero-photo .frame { border-width: 5px; }
+        .hero-photo img { aspect-ratio: 16 / 11; }
+        .price-card { position: static; inset: auto; width: 100%; margin-top: 16px; box-shadow: var(--shadow-sm); }
+        .stats-band { margin-top: 22px; z-index: 1; }
+        .stats { grid-template-columns: 1fr 1fr; gap: 12px; }
+        .stat { padding: 20px 20px; }
+        .about-grid { grid-template-columns: 1fr; gap: 26px; }
+        .pull-quote { border-radius: 80px 22px 22px 22px; padding: 38px 30px 32px; }
+        .feature-list { grid-template-columns: 1fr; }
+        .area-block { padding: 30px 26px; }
+        .units, .util-grid, .contact-card { grid-template-columns: 1fr; }
+        .voucher-band { grid-template-columns: 1fr; }
+        .voucher-photo { min-height: 240px; order: -1; }
+        .voucher-photo img { position: absolute; }
+        .voucher-copy { padding: 42px 30px; }
+        .contact-side { border-left: 0; border-top: 1px solid rgba(248,238,214,.14); padding: 40px 30px 46px; }
+        .contact-copy { padding: 44px 30px 8px; }
+        .steps { grid-template-columns: 1fr; gap: 14px; }
+        .gallery { grid-template-columns: 1fr 1fr; }
+        .g-bath { grid-column: span 1; grid-row: auto; }
+        .g-bath .g-frame { border-radius: 70px 70px 14px 14px; }
+        .g-kitchen { grid-column: span 2; }
+        .g-living, .g-bed { grid-column: span 1; }
+        .g-bath img, .g-living img, .g-bed img { aspect-ratio: 4 / 3; }
+        .g-kitchen img { aspect-ratio: 16 / 9; }
+        section { padding-top: 64px; }
+        .gallery-sec, .faq-sec { margin-top: 64px; padding: 60px 0 64px; }
+        .voucher-band { margin-top: 64px; }
+        .photo-banner { margin-top: 52px; min-height: 280px; }
+        .photo-banner .pb-in { padding: 28px 26px; }
+        .sun-divider { padding: 44px 22px 0; }
+        .unit-body, .util-card { padding: 28px; }
+        .soon-card .unit-body { padding-top: 28px; }
+        .unit-facts { grid-template-columns: 1fr 1fr; }
+        .top-phone { display: none; }
+        .sticky-bar { display: flex; }
+        .trust { margin-top: 44px; }
+        .trust-in { justify-content: flex-start; }
+      }
+      @media (max-width: 640px) {
+        .wrap { padding: 0 22px; }
+        .top-actions .btn-line { display: none; }
+        .top-actions .btn { padding: 11px 18px; }
+        .brand-name { font-size: 1.15rem; }
+        .brand-mark { width: 40px; height: 44px; }
+        .price-card { flex-direction: column; align-items: stretch; gap: 12px; }
+        .price-card .pc-div { width: auto; height: 1px; }
+      }
+      @media (max-width: 520px) {
+        .gallery { grid-template-columns: 1fr; }
+        .g-kitchen, .g-bath, .g-living, .g-bed { grid-column: span 1; }
+        .g-kitchen img, .g-bath img, .g-living img, .g-bed img { aspect-ratio: 4 / 3; }
+        .brand-sub { display: none; }
+        .stat { padding: 18px 18px; }
+        .stat .v { font-size: 1.45rem; }
+        .hero-ctas .btn { flex: 1; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .btn, .gallery img, .faq-item summary .f-ic { transition: none; }
+        .rv { opacity: 1; transform: none; transition: none; }
+        .hero-photo img, .photo-banner img { animation: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="#top" aria-label="Better Living, back to top">
+          <span class="brand-mark" aria-hidden="true">BL</span>
+          <span>
+            <span class="brand-name">Better Living</span>
+            <span class="brand-sub">Washington County, PA</span>
+          </span>
+        </a>
+        <nav class="top-nav" aria-label="Page sections">
+          <a href="#home">The home</a>
+          <a href="#photos">Photos</a>
+          <a href="#vouchers">Vouchers</a>
+          <a href="#details">Details</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="top-actions">
+          <a class="top-phone" href="tel:+17866304034">(786) 630-4034</a>
+          <a class="btn btn-line" href="sms:+17866304034">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg>
+            Text us
+          </a>
+          <a class="btn btn-solid" href="tel:+17866304034">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            Call now
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero -->
+      <div class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <span class="hero-eyebrow"><span class="dot">Available now</span> Now leasing · Washington County, PA</span>
+            <h1>A brighter place to <em>call home.</em></h1>
+            <p class="hero-place">Washington County, Pennsylvania</p>
+            <p class="hero-lede">Better Living is bringing quality homes back to neighborhoods across Washington County. We renovate houses with care, keep them well maintained, and welcome families and voucher holders alike. This bright, freshly renovated 2 bedroom, 1 bath home in Donora is where it starts: a new kitchen, warm wood look floors, and room made for real family life.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-solid btn-lg" href="tel:+17866304034">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+                Call (786) 630-4034
+              </a>
+              <a class="btn btn-line btn-lg" href="sms:+17866304034">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg>
+                Send a text
+              </a>
+            </div>
+            <p class="hero-note">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 1 year lease</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> No pets</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Vouchers welcome</span>
+            </p>
+          </div>
+
+          <figure class="hero-photo">
+            <div class="frame">
+              <img src="bedroom1.jpg" alt="Living room in Unit 1 with a ceiling fan, wood look flooring, and bright natural light" />
+            </div>
+            <div class="price-card">
+              <div>
+                <div class="pc-k">Unit 1 · Rent</div>
+                <div class="pc-v">$1,000 <small>/ month</small></div>
+              </div>
+              <div class="pc-div" aria-hidden="true"></div>
+              <div class="pc-s">2 bed · 1 bath<br />$1,000 deposit</div>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+      <div class="wrap stats-band">
+        <div class="stats rv" aria-label="Unit 1 key details">
+          <div class="stat"><div class="k">Rent</div><div class="v">$1,000 <small>/ month</small></div></div>
+          <div class="stat"><div class="k">Security deposit</div><div class="v">$1,000</div></div>
+          <div class="stat"><div class="k">Bedrooms · Bath</div><div class="v">2 bed · 1 bath</div></div>
+          <div class="stat"><div class="k">Available</div><div class="v">Now</div></div>
+        </div>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="trust">
+        <div class="wrap trust-in">
+          <span class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z"/><path d="m9 12 2 2 4-4"/></svg>
+            Section 8 &amp; HUD-VASH welcome
+          </span>
+          <span class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7Z"/></svg>
+            Water, sewer &amp; trash included
+          </span>
+          <span class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>
+            Renovated &amp; move-in ready
+          </span>
+          <span class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Available today
+          </span>
+        </div>
+      </div>
+
+
+      <div class="sun-divider" aria-hidden="true"><span class="sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span></div>
+      <!-- About -->
+      <section class="wrap" id="home" aria-labelledby="about-h">
+        <div class="sec-head rv">
+          <span class="sec-label">About Better Living</span>
+          <h2 id="about-h">A home that helps you be <em>your best self</em></h2>
+        </div>
+        <div class="about-grid">
+          <blockquote class="pull-quote rv">
+            “Everyone deserves better living. A quality home gives you the space to live better, rest well, and be your best self.”
+            <span class="pq-by">The Better Living promise</span>
+          </blockquote>
+          <div class="about-copy rv rv-d1">
+            <p>Our role in Washington County is simple: take homes that need care, renovate them to a standard we would want for our own family, and offer them as stable, welcoming rentals for real families. We started in Donora and we are growing town by town, including Charleroi, Monongahela, Monessen, Belle Vernon and beyond, so wherever in the county you land, the standard stays the same.</p>
+            <p>We are not just leasing a unit. We are investing in these neighborhoods for the long term: solid, bright, well maintained homes, clear terms, and a genuine welcome for Section 8 and veteran voucher holders. When your home is taken care of, everyday life gets easier, and you can put your energy into living better.</p>
+          </div>
+        </div>
+        <div class="feature-list">
+          <div class="feature rv">
+            <span class="f-num">No. 01</span>
+            <h3>Renovated kitchen &amp; bath</h3>
+            <p>Gray cabinetry, a penny tile backsplash, stainless appliances, and a tiled tub and shower, all finished new.</p>
+          </div>
+          <div class="feature rv rv-d1">
+            <span class="f-num">No. 02</span>
+            <h3>Warm wood look floors</h3>
+            <p>Bright rooms with wood look flooring throughout and ceiling fans for easy, comfortable living.</p>
+          </div>
+          <div class="feature rv rv-d2">
+            <span class="f-num">No. 03</span>
+            <h3>Invested in the neighborhood</h3>
+            <p>Locally owned and cared for, with lawn and snow care handled by the owner. Homes that add to the street, not just sit on it.</p>
+          </div>
+        </div>
+        <div class="area-block rv">
+          <span class="sec-label">Where we are</span>
+          <h3>Rooted in Donora, <em>growing across Washington County</em></h3>
+          <p>Better Living started in Donora, PA, and that is still home base. From here we are adding homes across Washington County, so the same care, the same standard, and the same welcome for voucher holders reaches more families in more towns over time.</p>
+          <div class="area-chips" aria-label="Areas Better Living serves and is growing into">
+            <span class="area-chip live">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.79a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Donora <span class="ac-tag">Now leasing</span>
+            </span>
+            <span class="area-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.79a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Charleroi
+            </span>
+            <span class="area-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.79a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Monongahela
+            </span>
+            <span class="area-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.79a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Monessen
+            </span>
+            <span class="area-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.79a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Belle Vernon
+            </span>
+            <span class="area-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.79a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              More of Washington County to come
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <div class="wrap">
+        <div class="photo-banner rv" role="img" aria-label="A bright, sun washed room in the home">
+          <img src="bedroom2.jpg" alt="" loading="lazy" />
+          <div class="pb-in">
+            <div class="pb-k">The Better Living standard</div>
+            <div class="pb-t">Sun washed rooms, warm floors, and a home that feels <em>calm from the first step in.</em></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery -->
+      <div class="gallery-sec" id="photos">
+        <div class="tile-strip" aria-hidden="true"></div>
+        <div class="wrap">
+          <div class="sec-head rv">
+            <span class="sec-label blue">Inside Unit 1</span>
+            <h2>Take a look <em class="blue">inside</em></h2>
+            <p>Real photos of the home, exactly as you will find it. Tap any photo to see it larger.</p>
+          </div>
+          <div class="gallery">
+            <figure class="g-bath rv">
+              <div class="g-frame">
+                <button class="g-open" type="button" data-cap="Renovated bathroom" aria-label="View the renovated bathroom photo larger">
+                  <img src="bathroom.jpg" alt="Renovated bathroom in Unit 1 with a tiled tub and shower, a modern vanity, and wood look flooring" loading="lazy" />
+                  <span class="g-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+                </button>
+              </div>
+              <figcaption>Renovated bathroom</figcaption>
+            </figure>
+            <figure class="g-kitchen rv rv-d1">
+              <div class="g-frame">
+                <button class="g-open" type="button" data-cap="Renovated kitchen" aria-label="View the renovated kitchen photo larger">
+                  <img src="kitchen.jpg" alt="Renovated kitchen in Unit 1 with gray shaker cabinets, a penny tile backsplash, under cabinet lighting, and stainless steel appliances" loading="lazy" />
+                  <span class="g-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+                </button>
+              </div>
+              <figcaption>Renovated kitchen</figcaption>
+            </figure>
+            <figure class="g-living rv">
+              <div class="g-frame">
+                <button class="g-open" type="button" data-cap="Living room" aria-label="View the living room photo larger">
+                  <img src="bedroom1.jpg" alt="Living room in Unit 1 with a ceiling fan, wood look flooring, and two white doors" loading="lazy" />
+                  <span class="g-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+                </button>
+              </div>
+              <figcaption>Living room</figcaption>
+            </figure>
+            <figure class="g-bed rv rv-d1">
+              <div class="g-frame">
+                <button class="g-open" type="button" data-cap="Bedroom with window" aria-label="View the bedroom photo larger">
+                  <img src="bedroom2.jpg" alt="Bedroom in Unit 1 with wood look flooring and a window with a sheer curtain" loading="lazy" />
+                  <span class="g-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+                </button>
+              </div>
+              <figcaption>Bedroom with window</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <!-- Available homes -->
+      <section class="wrap" aria-labelledby="units-h">
+        <div class="sec-head rv">
+          <span class="sec-label">The homes</span>
+          <h2 id="units-h">Available <em>homes</em></h2>
+          <p>These are our current homes in Donora, the start of a growing Washington County portfolio. One is ready today, the other is on its way, and more renovated homes across the county are coming.</p>
+        </div>
+        <div class="units">
+          <article class="unit-card rv">
+            <div class="unit-photo">
+              <img src="kitchen.jpg" alt="Renovated kitchen in Unit 1 with gray shaker cabinets, a penny tile backsplash, and stainless steel appliances" loading="lazy" />
+              <span class="badge badge-avail">Available now</span>
+            </div>
+            <div class="unit-body">
+              <div class="unit-top">
+                <div>
+                  <div class="unit-name">Unit 1</div>
+                  <div class="unit-spec">2 bed · 1 bath</div>
+                </div>
+                <div class="unit-price">
+                  <div class="p-v">$1,000</div>
+                  <div class="p-k">per month</div>
+                </div>
+              </div>
+              <p>Freshly renovated from top to bottom, with a new kitchen, an updated bath, and room for a family to spread out and settle in.</p>
+              <div class="unit-facts">
+                <div class="fact"><div class="k">Rent</div><div class="v">$1,000/mo</div></div>
+                <div class="fact"><div class="k">Deposit</div><div class="v">$1,000</div></div>
+                <div class="fact"><div class="k">Lease</div><div class="v">1 year</div></div>
+                <div class="fact"><div class="k">Pets</div><div class="v">No pets</div></div>
+              </div>
+              <div class="unit-actions">
+                <a class="btn btn-solid" href="https://rental.turbotenant.com/p/563-mckean-ave-donora-pa-unit-unit-1/a163bbab-fdd3-4026-a7f5-604466b183a1" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+                  Apply for This Home
+                </a>
+                <a class="btn btn-line" href="tel:+17866304034">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+                  Call about Unit 1
+                </a>
+                <a class="btn btn-line" href="sms:+17866304034">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg>
+                  Text about Unit 1
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="unit-card soon-card rv rv-d1">
+            <div class="unit-body">
+              <div class="unit-top">
+                <div>
+                  <div class="unit-name">Unit 2</div>
+                  <div class="unit-spec">1 bed · 1 bath</div>
+                </div>
+                <span class="badge badge-soon">Coming soon</span>
+              </div>
+              <p>This cozy 1 bedroom is being prepared and is not listed yet. Join the waitlist and you will be the first to hear when it is ready.</p>
+              <ul class="soon-steps">
+                <li><span class="n" aria-hidden="true">1</span> Tap the button below to open a prefilled text.</li>
+                <li><span class="n" aria-hidden="true">2</span> Add your name and send it.</li>
+                <li><span class="n" aria-hidden="true">3</span> We reach out in order as soon as Unit 2 opens up.</li>
+              </ul>
+              <div class="unit-actions">
+                <a class="btn btn-gold" href="sms:+17866304034?&amp;body=Please%20add%20me%20to%20the%20waitlist%20for%20Unit%202%20in%20Donora.%20My%20name%20is%3A%20">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+                  Join the Unit 2 waitlist
+                </a>
+                <a class="btn btn-outline-cream" href="sms:+17866304034">Text for details</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Vouchers -->
+        <div class="voucher-band rv" id="vouchers">
+          <div class="voucher-copy">
+            <span class="sec-label">Vouchers</span>
+            <h2>Voucher holders, <em>welcome home</em></h2>
+            <p>We gladly work with Section 8 Housing Choice and HUD VASH veteran vouchers, here in Donora and in every Washington County home we add. If you hold a voucher, just mention it when you call or text and we will walk you through the next steps.</p>
+            <ul class="voucher-points">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Section 8 Housing Choice vouchers accepted
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                HUD-VASH veteran vouchers accepted
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Water, sewer, and trash already covered by the owner
+              </li>
+            </ul>
+            <a class="btn btn-cream btn-lg" href="tel:+17866304034">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+              Call (786) 630-4034
+            </a>
+          </div>
+          <div class="voucher-photo" aria-hidden="true">
+            <img src="bedroom2.jpg" alt="" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Work preview -->
+      <div class="work-sec" id="work">
+        <div class="tile-strip" aria-hidden="true"></div>
+        <div class="wrap">
+          <div class="sec-head rv">
+            <span class="sec-label blue">From the portfolio</span>
+            <h2>Our <em class="blue">work</em></h2>
+            <p>Renovations we have finished in homes we own across Washington County.</p>
+          </div>
+          <div class="work-grid">
+            <article class="work-card work-lead rv">
+              <div class="work-frame">
+                <img src="kitchen-portfolio.jpg" alt="Finished kitchen renovation in another Better Living home in Donora with gray shaker cabinets, a white subway tile backsplash, stainless steel appliances, and wood look flooring" loading="lazy" />
+              </div>
+              <div class="work-body">
+                <span class="work-tag">Kitchen renovation</span>
+                <h3>Another kitchen, Donora</h3>
+                <p>Gray shaker cabinets, a white subway tile backsplash, stainless appliances, and warm wood look floors. A different layout and design, the same Better Living standard.</p>
+              </div>
+            </article>
+            <article class="work-card work-side rv rv-d1">
+              <div class="work-frame">
+                <img src="bathroom.jpg" alt="Finished bathroom renovation in Unit 1 in Donora with a tiled tub and shower and a modern vanity" loading="lazy" />
+              </div>
+              <div class="work-body">
+                <span class="work-tag blue">Bathroom renovation</span>
+                <h3>Unit 1 Bathroom, Donora</h3>
+                <p>A tiled tub and shower, a modern vanity, and warm wood look floors.</p>
+              </div>
+            </article>
+            <article class="work-card work-side rv">
+              <div class="work-frame">
+                <img src="bedroom1.jpg" alt="Finished living room in Unit 1 in Donora with wood look flooring, a ceiling fan, and bright natural light" loading="lazy" />
+              </div>
+              <div class="work-body">
+                <span class="work-tag">Living space</span>
+                <h3>Unit 1 Living Room, Donora</h3>
+                <p>Bright, open living space with wood look floors and a ceiling fan.</p>
+              </div>
+            </article>
+            <article class="work-card work-wide rv rv-d1">
+              <div class="work-frame">
+                <img src="bedroom2.jpg" alt="Finished bedroom in Unit 1 in Donora with wood look flooring and a window with a sheer curtain" loading="lazy" />
+              </div>
+              <div class="work-body">
+                <span class="work-tag blue">Bedroom finish</span>
+                <h3>Unit 1 Bedroom, Donora</h3>
+                <p>A sun washed bedroom with warm floors and soft natural light.</p>
+              </div>
+            </article>
+            <article class="work-card work-soon rv">
+              <span class="ws-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z"/><circle cx="12" cy="13" r="3.5"/></svg></span>
+              <h3>More photos coming soon</h3>
+              <p>More finished kitchens, baths, and living spaces from our other Washington County homes are on the way. As each renovation wraps up, its photos land here.</p>
+            </article>
+          </div>
+
+          <div class="work-steps-head rv">
+            <h3>How a home <em>comes together</em></h3>
+            <p>Every Better Living home follows the same path, even though each one gets its own layout and design along the way.</p>
+          </div>
+          <div class="steps">
+            <div class="step rv">
+              <div class="s-num">Step one</div>
+              <h3>Survey &amp; plan</h3>
+              <p>We walk every home first, note what needs care, and plan a layout and design that fits the house and the street it sits on.</p>
+            </div>
+            <div class="step rv rv-d1">
+              <div class="s-num">Step two</div>
+              <h3>Renovate</h3>
+              <p>Cabinets, tile, floors, fixtures, and paint, brought up to one consistent standard, home by home.</p>
+            </div>
+            <div class="step rv rv-d2">
+              <div class="s-num">Step three</div>
+              <h3>Finish &amp; photograph</h3>
+              <p>Cleaned, checked from room to room, and photographed as it stands before anyone comes to tour it.</p>
+            </div>
+          </div>
+
+          <div class="work-note rv">
+            <div class="wn-text">
+              <h3>More portfolio photos coming</h3>
+              <p>We are adding finished rooms from our other Washington County homes as each renovation wraps up. Every photo in this section will be labeled with its town, so you always know which home you are looking at.</p>
+            </div>
+            <a class="btn btn-solid" href="tel:+17866304034">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+              Call or text (786) 630-4034
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Utilities -->
+      <section class="wrap" id="details" aria-labelledby="util-h">
+        <div class="sec-head rv">
+          <span class="sec-label">Clear and simple</span>
+          <h2 id="util-h">Utilities and what is <em class="blue">covered</em></h2>
+          <p>No surprises. Here is exactly what the owner covers at Unit 1 and what you cover, spelled out before you ever sign.</p>
+        </div>
+        <div class="util-grid">
+          <div class="util-card owner rv">
+            <h3>
+              <span class="u-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+              Owner pays
+            </h3>
+            <p class="u-sub">Included with your rent, handled for you.</p>
+            <ul class="u-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> City water</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Public sewer</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Trash</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Lawn and snow care</li>
+            </ul>
+          </div>
+          <div class="util-card tenant rv rv-d1">
+            <h3>
+              <span class="u-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg></span>
+              Tenant pays
+            </h3>
+            <p class="u-sub">In your name, so you control your own usage.</p>
+            <ul class="u-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Electric heat</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Electric cooking</li>
+            </ul>
+            <p class="u-note">There is no air conditioning, so there is no cooling bill to plan for.</p>
+          </div>
+        </div>
+        <div class="policy-row rv" aria-label="Home policies">
+          <span class="policy-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg>
+            No pets
+          </span>
+          <span class="policy-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Available now
+          </span>
+          <span class="policy-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg>
+            1 year lease
+          </span>
+          <span class="policy-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z"/><path d="m9 12 2 2 4-4"/></svg>
+            Vouchers welcome
+          </span>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section class="wrap" aria-labelledby="steps-h">
+        <div class="sec-head rv">
+          <span class="sec-label">Getting started</span>
+          <h2 id="steps-h">Three steps to <em>your new home</em></h2>
+        </div>
+        <div class="steps">
+          <div class="step rv">
+            <div class="s-num">Step one</div>
+            <h3>Call or text</h3>
+            <p>Reach out at <a href="tel:+17866304034" style="font-weight:800; text-decoration:none;">(786) 630-4034</a> with your questions. If you hold a voucher, mention it right away.</p>
+          </div>
+          <div class="step rv rv-d1">
+            <div class="s-num">Step two</div>
+            <h3>See it in person</h3>
+            <p>Schedule a showing and walk the home yourself, the new kitchen, the updated bath, the bright rooms.</p>
+          </div>
+          <div class="step rv rv-d2">
+            <div class="s-num">Step three</div>
+            <h3>Make it yours</h3>
+            <p>Unit 1 is available now on a 1 year lease at $1,000 a month with a $1,000 deposit. No pets.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <div class="faq-sec" id="faq">
+        <div class="tile-strip" aria-hidden="true"></div>
+        <div class="wrap">
+          <div class="sec-head center rv">
+            <span class="sec-label blue">Good to know</span>
+            <h2>Questions, <em class="blue">answered</em></h2>
+            <p>The details renters ask about most, all in one place.</p>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item rv">
+              <summary>How much is the rent and deposit?<span class="f-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+              <div class="f-body"><p>Unit 1 rents for $1,000 a month with a $1,000 security deposit. The lease term is 1 year, and the home is available now.</p></div>
+            </details>
+            <details class="faq-item rv">
+              <summary>Do you accept vouchers?<span class="f-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+              <div class="f-body"><p>Yes. Section 8 Housing Choice and HUD-VASH veteran vouchers are both welcome. Just mention your voucher when you call or text, and we will walk you through the next steps.</p></div>
+            </details>
+            <details class="faq-item rv">
+              <summary>What utilities are included?<span class="f-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+              <div class="f-body"><p>The owner covers city water, public sewer, trash, and lawn and snow care. You cover electric heat and electric cooking, in your name, so you control your own usage. There is no air conditioning.</p></div>
+            </details>
+            <details class="faq-item rv">
+              <summary>Are pets allowed?<span class="f-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+              <div class="f-body"><p>No, pets are not allowed in this home.</p></div>
+            </details>
+            <details class="faq-item rv">
+              <summary>What about the 1 bedroom, Unit 2?<span class="f-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+              <div class="f-body"><p>Unit 2 is a 1 bed, 1 bath home in Donora. It is being prepared and is not listed yet, and pricing has not been announced. Join the waitlist by text and you will be the first to hear when it is ready.</p></div>
+            </details>
+            <details class="faq-item rv">
+              <summary>Where are your homes?<span class="f-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+              <div class="f-body"><p>Our homes today are in Donora, PA, and Better Living is growing across Washington County, including Charleroi, Monongahela, Monessen, and Belle Vernon. Call or text to hear what is available now and what is coming next near you.</p></div>
+            </details>
+            <details class="faq-item rv">
+              <summary>How do I schedule a showing?<span class="f-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+              <div class="f-body"><p>Call or text (786) 630-4034 and we will find a time that works for you.</p></div>
+            </details>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <section class="wrap" aria-labelledby="contact-h">
+        <div class="contact-card rv">
+          <div class="contact-copy">
+            <span class="sec-label">Say hello</span>
+            <h2 id="contact-h">Looking for a home in <em>Washington County?</em></h2>
+            <p>Call or text to ask about what is available now, what is coming next, or to schedule a showing in Donora or anywhere we serve in the county. Voucher holders, Section 8 Housing Choice and HUD-VASH are both welcome here. Just mention your voucher when you reach out.</p>
+          </div>
+          <div class="contact-side">
+            <span class="cs-k">Call or text anytime</span>
+            <a class="phone-big" href="tel:+17866304034">(786) 630-4034</a>
+            <a class="btn btn-cream" href="tel:+17866304034">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+              Call now
+            </a>
+            <a class="btn btn-outline-cream" href="sms:+17866304034">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg>
+              Send a text
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap f-in">
+        <span><span class="f-brand">Better Living</span> · Quality rental homes across Washington County, PA</span>
+        <span>Call or text <a href="tel:+17866304034">(786) 630-4034</a></span>
+      </div>
+    </footer>
+
+    <nav class="sticky-bar" aria-label="Quick contact">
+      <a class="btn btn-solid" href="tel:+17866304034">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        Call
+      </a>
+      <a class="btn btn-line" href="sms:+17866304034">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg>
+        Text
+      </a>
+    </nav>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+      <div class="lb-frame">
+        <div id="lb-slot"></div>
+        <div class="lb-bar">
+          <span class="lb-cap" id="lb-cap"></span>
+          <div class="lb-nav">
+            <button class="lb-btn" type="button" id="lb-prev" aria-label="Previous photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+              Prev
+            </button>
+            <button class="lb-btn" type="button" id="lb-next" aria-label="Next photo">
+              Next
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+            <button class="lb-btn" type="button" id="lb-close">Close</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <script>
+      (function () {
+        /* Scroll reveal */
+        var revealEls = document.querySelectorAll(".rv");
+        if ("IntersectionObserver" in window) {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in");
+                io.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+          Array.prototype.forEach.call(revealEls, function (el) { io.observe(el); });
+        } else {
+          Array.prototype.forEach.call(revealEls, function (el) { el.classList.add("in"); });
+        }
+
+        /* Lightbox with prev / next */
+        var dialog = document.getElementById("lightbox");
+        var slot = document.getElementById("lb-slot");
+        var cap = document.getElementById("lb-cap");
+        var closeBtn = document.getElementById("lb-close");
+        var prevBtn = document.getElementById("lb-prev");
+        var nextBtn = document.getElementById("lb-next");
+        var openers = Array.prototype.slice.call(document.querySelectorAll(".g-open"));
+        var current = 0;
+
+        function show(index) {
+          current = (index + openers.length) % openers.length;
+          var btn = openers[current];
+          var sourceImg = btn.querySelector("img");
+          slot.innerHTML = "";
+          var img = document.createElement("img");
+          img.src = sourceImg.getAttribute("src");
+          img.alt = sourceImg.alt;
+          slot.appendChild(img);
+          cap.textContent = btn.getAttribute("data-cap") + " · " + (current + 1) + " of " + openers.length;
+        }
+        openers.forEach(function (btn, i) {
+          btn.addEventListener("click", function () {
+            show(i);
+            if (typeof dialog.showModal === "function") { dialog.showModal(); }
+          });
+        });
+        prevBtn.addEventListener("click", function () { show(current - 1); });
+        nextBtn.addEventListener("click", function () { show(current + 1); });
+        closeBtn.addEventListener("click", function () { dialog.close(); });
+        dialog.addEventListener("click", function (event) {
+          if (event.target === dialog) { dialog.close(); }
+        });
+        document.addEventListener("keydown", function (event) {
+          if (!dialog.open) { return; }
+          if (event.key === "ArrowLeft") { show(current - 1); }
+          if (event.key === "ArrowRight") { show(current + 1); }
+        });
+      })();
+    </script>
+  </body>
+</html>
